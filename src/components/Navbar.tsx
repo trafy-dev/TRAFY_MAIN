@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Button from "./Button";
@@ -19,14 +20,14 @@ export default function Navbar({ logoLabel, links, primaryCta, secondaryCta }: N
   return (
     <header className="sticky top-0 z-40 border-b border-ink/10 bg-green-light/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <a href="#top" className="flex items-center gap-2">
+        <Link to="/" onClick={() => window.scrollTo(0, 0)} className="flex items-center gap-2">
           <span className="flex h-8 items-center justify-center rounded-lg bg-green-hard px-2.5 font-display text-sm font-extrabold tracking-tight text-ink">
             Trafy
           </span>
           {suffix && (
             <span className="font-display text-xl font-bold tracking-tight">{suffix}</span>
           )}
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
           {links.map((link) => (
