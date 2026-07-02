@@ -6,8 +6,8 @@ export default function CookiePolicy() {
       <h2>1. What Are Cookies</h2>
       <p>
         Cookies are small text files placed on your device when you visit a website. They help the website
-        remember your preferences, understand how you use the site, and improve your experience. Trafy Technologies
-        Pvt. Ltd. ("Trafy", "we", "us") uses cookies and similar technologies on <strong>trafy.ai</strong> and
+        remember your preferences, understand how you use the site, and improve your experience. Dmerz Technology
+        Pvt. Ltd., the company behind Trafy ("Trafy", "we", "us"), uses cookies and similar technologies on <strong>trafy.ai</strong> and
         its sub-domains (the "Platform").
       </p>
 
@@ -85,7 +85,7 @@ export default function CookiePolicy() {
       <p>If you have questions about our use of cookies, please contact us at:</p>
       <ul>
         <li><strong>Email:</strong> <a href="mailto:privacy@trafy.ai">privacy@trafy.ai</a></li>
-        <li><strong>Company:</strong> Trafy Technologies Pvt. Ltd.</li>
+        <li><strong>Company:</strong> Dmerz Technology Pvt. Ltd. (operating as Trafy)</li>
       </ul>
     </LegalPage>
   );

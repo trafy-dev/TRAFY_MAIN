@@ -6,7 +6,7 @@ export default function TermsOfService() {
       <h2>1. Acceptance of Terms</h2>
       <p>
         These Terms of Service ("Terms") govern your access to and use of the services, website, and applications
-        (collectively, the "Platform") provided by Trafy Technologies Pvt. Ltd. ("Trafy", "we", "us", or "our").
+        (collectively, the "Platform") provided by Dmerz Technology Pvt. Ltd., the company behind Trafy ("Trafy", "we", "us", or "our").
         By accessing or using the Platform, you agree to be bound by these Terms. If you do not agree, you must
         not use the Platform.
       </p>
@@ -124,7 +124,7 @@ export default function TermsOfService() {
       <p>For questions regarding these Terms, contact us at:</p>
       <ul>
         <li><strong>Email:</strong> <a href="mailto:legal@trafy.ai">legal@trafy.ai</a></li>
-        <li><strong>Company:</strong> Trafy Technologies Pvt. Ltd.</li>
+        <li><strong>Company:</strong> Dmerz Technology Pvt. Ltd. (operating as Trafy)</li>
       </ul>
     </LegalPage>
   );

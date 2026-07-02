@@ -5,7 +5,7 @@ export default function Accessibility() {
     <LegalPage title="Accessibility Statement" lastUpdated="July 1, 2026">
       <h2>Our Commitment</h2>
       <p>
-        Trafy Technologies Pvt. Ltd. ("Trafy") is committed to ensuring digital accessibility for people of all
+        Dmerz Technology Pvt. Ltd., the company behind Trafy ("Trafy"), is committed to ensuring digital accessibility for people of all
         abilities. We are continually improving the user experience for everyone and applying the relevant
         accessibility standards to ensure we provide equal access to all users.
       </p>

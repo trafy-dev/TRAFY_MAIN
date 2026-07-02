@@ -5,7 +5,7 @@ export default function PrivacyPolicy() {
     <LegalPage title="Privacy Policy" lastUpdated="July 1, 2026">
       <h2>1. Introduction</h2>
       <p>
-        Trafy Technologies Pvt. Ltd. ("<strong>Trafy</strong>", "we", "us", or "our") is committed to protecting your
+        Dmerz Technology Pvt. Ltd., the company behind Trafy ("<strong>Trafy</strong>", "we", "us", or "our"), is committed to protecting your
         privacy. This Privacy Policy describes how we collect, use, disclose, and safeguard your personal information
         when you visit our website <strong>trafy.ai</strong> and its sub-domains (the "Platform"), including any
         related services, tools, and applications.
@@ -103,7 +103,7 @@ export default function PrivacyPolicy() {
       </p>
       <ul>
         <li><strong>Email:</strong> <a href="mailto:privacy@trafy.ai">privacy@trafy.ai</a></li>
-        <li><strong>Company:</strong> Trafy Technologies Pvt. Ltd.</li>
+        <li><strong>Company:</strong> Dmerz Technology Pvt. Ltd. (operating as Trafy)</li>
       </ul>
     </LegalPage>
   );

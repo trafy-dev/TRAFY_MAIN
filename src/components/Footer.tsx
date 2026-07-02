@@ -227,7 +227,7 @@ export default function Footer({ siteLabel, tagline, columns }: FooterProps) {
           {/* Left — copyright + legal links */}
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
             <p className="text-xs text-white/35">
-              &copy; {new Date().getFullYear()} Trafy Technologies Pvt. Ltd. All rights reserved.
+              &copy; {new Date().getFullYear()} Dmerz Technology Pvt. Ltd. All rights reserved.
             </p>
             <span className="hidden h-3 w-px bg-white/15 sm:inline-block" aria-hidden="true" />
             {legalLinks.map(({ label, href }, i) => (
