@@ -53,7 +53,7 @@ const footerColumns = [
       { label: "Trafy Build", href: "https://build.trafy.ai" },
       { label: "Trafy Cohort", href: "https://academy.trafy.ai" },
       { label: "Community", href: "https://www.linkedin.com/company/trafy-ai/" },
-      { label: "Open Source", href: "https://github.com/trafy-ai" },
+      { label: "Follow Us", href: "https://www.instagram.com/trafy.ai" },
     ],
   },
 ];

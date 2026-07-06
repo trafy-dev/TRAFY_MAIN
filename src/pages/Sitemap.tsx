@@ -39,10 +39,10 @@ const sections = [
   {
     title: "Connect",
     links: [
+      { label: "Instagram", href: "https://www.instagram.com/trafy.ai" },
       { label: "LinkedIn", href: "https://www.linkedin.com/company/trafy-ai/" },
-      { label: "X (Twitter)", href: "https://x.com/trafy_ai" },
-      { label: "GitHub", href: "https://github.com/trafy-ai" },
-      { label: "YouTube", href: "https://youtube.com/@trafy-ai" },
+      { label: "X (Twitter)", href: "https://x.com/trafyai" },
+      { label: "Facebook", href: "https://www.facebook.com/trafyedu?mibextid=wwXIfr" },
       { label: "Email", href: "mailto:hello@trafy.ai" },
     ],
   },
