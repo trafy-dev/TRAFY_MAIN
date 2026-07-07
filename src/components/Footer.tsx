@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNewsletterSubscribe } from "../hooks/useNewsletterSubscribe";
 
 type FooterColumn = {
   title: string;
@@ -71,15 +72,13 @@ const companyLinks = [
 /* ── Footer component ─────────────────────────────────────────────── */
 export default function Footer({ siteLabel, tagline, columns }: FooterProps) {
   const [email, setEmail] = useState("");
-  const [subscribed, setSubscribed] = useState(false);
+  const { status, errorMessage, subscribe } = useNewsletterSubscribe("main");
   const suffix = siteLabel.replace(/^Trafy\s*/, "").trim();
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email.trim()) {
-      setSubscribed(true);
-      setEmail("");
-    }
+    const result = await subscribe(email);
+    if (result === "success" || result === "already") setEmail("");
   };
 
   return (
@@ -168,30 +167,36 @@ export default function Footer({ siteLabel, tagline, columns }: FooterProps) {
               Get the latest on AI talent, product launches, and industry insights.
             </p>
 
-            {subscribed ? (
+            {status === "success" || status === "already" ? (
               <div className="flex items-center gap-2 rounded-xl border border-green-hard/30 bg-green-hard/10 px-4 py-3 text-sm text-green-hard">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M20 6L9 17l-5-5" />
                 </svg>
-                You&rsquo;re subscribed!
+                {status === "already" ? "You're already subscribed!" : "You're subscribed!"}
               </div>
             ) : (
-              <form onSubmit={handleSubscribe} className="flex gap-2">
-                <input
-                  type="email"
-                  required
-                  placeholder="you@company.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="min-w-0 flex-1 rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-white/30 outline-none transition-colors focus:border-green-hard/60 focus:ring-1 focus:ring-green-hard/30"
-                />
-                <button
-                  type="submit"
-                  className="inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-green-hard px-4 py-2.5 text-sm font-semibold text-ink transition-all duration-200 hover:brightness-110 hover:shadow-lg hover:shadow-green-hard/20 active:scale-[0.97]"
-                >
-                  Subscribe
-                </button>
-              </form>
+              <>
+                <form onSubmit={handleSubscribe} className="flex gap-2">
+                  <input
+                    type="email"
+                    required
+                    placeholder="you@company.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="min-w-0 flex-1 rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-white/30 outline-none transition-colors focus:border-green-hard/60 focus:ring-1 focus:ring-green-hard/30"
+                  />
+                  <button
+                    type="submit"
+                    disabled={status === "submitting"}
+                    className="inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-green-hard px-4 py-2.5 text-sm font-semibold text-ink transition-all duration-200 hover:brightness-110 hover:shadow-lg hover:shadow-green-hard/20 active:scale-[0.97] disabled:opacity-50"
+                  >
+                    {status === "submitting" ? "Subscribing…" : "Subscribe"}
+                  </button>
+                </form>
+                {status === "error" && (
+                  <p className="mt-2 text-xs text-rose">{errorMessage}</p>
+                )}
+              </>
             )}
           </div>
         </div>
